@@ -6,17 +6,17 @@ spec:
   replicas: 1
   selector: 
     matchLabels:
-	app: conv_temp
+      app: conv_temp
 template:
   metadata:
-	labels:
+        labels:
 	  app: conv_temp
-	spec:
-	  containers:
-             - name: conv_temp
-               image: rafaelsucra/conversao-temperatura
-	       ports:
-                 - containerPort:8080
+        spec:
+          containers:
+	  - name: conv_temp
+	    image: rafaelsucra/conversao-temperatura
+            ports:
+              - containerPort:8080
 ---
 apiVersion: v1
 kind: Service
@@ -27,7 +27,6 @@ spec:
       app: conv_temp
    ports:				
       - port 8080
-	protocol: TCP
-	name: http
+        protocol: TCP
+        name: http
 	type: ClusterIP
-
