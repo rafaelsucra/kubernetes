@@ -13,7 +13,7 @@ template:
           app: conv_temp
         spec:
           containers:
-	  - name: conv_temp
+          - name: conv_temp
             image: rafaelsucra/conversao-temperatura
             ports:
               - containerPort:8080
