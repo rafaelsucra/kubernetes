@@ -14,8 +14,8 @@ template:
         spec:
           containers:
              - name: conv_peso
-	       image: rafaelsucra/conversao-peso
-	       ports:
+               image: rafaelsucra/conversao-peso
+               ports:
                  - containerPort:8080
 ---
 apiVersion: v1
