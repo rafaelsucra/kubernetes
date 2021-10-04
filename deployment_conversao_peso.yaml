@@ -6,15 +6,15 @@ spec:
   replicas: 1
   selector: 
     matchLabels:
-	app: conv_peso
+      app: conv_peso
 template:
   metadata:
-	labels:
-	  app: conv_peso
-	spec:
-	  containers:
+        labels:
+          app: conv_peso
+        spec:
+          containers:
              - name: conv_peso
-               image: rafaelsucra/conversao-peso
+	       image: rafaelsucra/conversao-peso
 	       ports:
                  - containerPort:8080
 ---
@@ -27,7 +27,7 @@ spec:
       app: conv_peso
    ports:				
       - port 8080
-	protocol: TCP
-	name: http
-	type: ClusterIP
+        protocol: TCP
+        name: http
+        type: ClusterIP
 
